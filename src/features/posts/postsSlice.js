@@ -1,5 +1,5 @@
 // a slice is where we divide up our state (Redux Store)
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit"; // nanoid will help us generate a random id
 
 const initialState = [];
 
@@ -7,9 +7,21 @@ const postsSlice = createSlice({
 	name: "posts",
 	initialState,
 	reducers: {
-		postAdded: (state, action) => {
-			// So, It's not mutating the state anymore, cause it uses ImmerJS underneath! (Only works in createSlice and ...)
-			state.push(action.payload); // uses ImmerJS behind the scenes (under the hood), so we don't have to worry about mutating the state directly!
+		postAdded: {
+			reducer: (state, action) => {
+				// So, It's not mutating the state anymore, cause it uses ImmerJS underneath! (Only works in createSlice and ...)
+				state.push(action.payload); // uses ImmerJS behind the scenes (under the hood), so we don't have to worry about mutating the state directly!
+			},
+
+			prepare: (title, content) => {
+				return {
+					payload: {
+						id: nanoid(), // generates some random id easily
+						title,
+						content,
+					},
+				};
+			},
 		},
 	},
 });

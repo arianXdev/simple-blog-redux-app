@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { nanoid } from "@reduxjs/toolkit"; // nanoid will help us generate a random id
 
 import { postAdded } from "./postsSlice";
 
@@ -16,13 +15,7 @@ const AddPostForm = () => {
 
 	const onSavePostClicked = () => {
 		if (title && content) {
-			dispatch(
-				postAdded({
-					id: nanoid(), // generates some random id easily
-					title,
-					content,
-				})
-			);
+			dispatch(postAdded(title, content));
 
 			setTitle("");
 			setContent("");

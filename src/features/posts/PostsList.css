@@ -1,0 +1,39 @@
+.Posts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Posts__title {
+	font-family: "Ubuntu Mono";
+	font-size: 2.3em;
+	font-weight: 900;
+	text-decoration: underline;
+}
+
+.Posts__list {
+	margin-top: 3em;
+}
+
+.Posts__item {
+	margin: 2em 0;
+	padding: 1.5em 4em;
+	border: 1px solid whitesmoke;
+	line-height: 1.8;
+	transition: all 0.1s ease-in-out;
+	border-radius: 30px;
+}
+
+.Posts__item:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.Posts__item-title {
+	font-size: 1.3em;
+}
+
+.Posts__item-body {
+	font-size: 0.95em;
+	color: darkgrey;
+}

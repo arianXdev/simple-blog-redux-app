@@ -1,6 +1,8 @@
 * {
 	padding: 0;
 	margin: 0;
+	border: none;
+	outline: none;
 	box-sizing: border-box;
 }
 
@@ -8,4 +10,8 @@ html {
 	font-family: Ubuntu, "Ubuntu Mono", sans-serif;
 	background: #333;
 	color: white;
+}
+
+button {
+	cursor: pointer;
 }

@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 3em;
 }
 
 .Posts__title {
@@ -10,10 +11,6 @@
 	font-size: 2.3em;
 	font-weight: 900;
 	text-decoration: underline;
-}
-
-.Posts__list {
-	margin-top: 3em;
 }
 
 .Posts__item {

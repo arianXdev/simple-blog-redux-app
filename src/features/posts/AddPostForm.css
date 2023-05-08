@@ -1,0 +1,91 @@
+.AddPost {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.AddPost__title {
+	font-family: "Ubuntu Mono";
+	font-weight: 900;
+	font-size: 2em;
+	margin-bottom: 1em;
+	text-decoration: underline;
+}
+
+.AddPost__form {
+	width: 30%;
+	display: inherit;
+	flex-direction: inherit;
+	justify-content: space-evenly;
+}
+
+.AddPost__group {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 1em 0;
+}
+
+.AddPost__group > label {
+	font-size: 0.9em;
+	color: #b9b9b9;
+	font-weight: lighter;
+	margin-bottom: 0.5em;
+}
+
+#postTitle {
+	font-family: "Ubuntu Mono";
+	font-size: 1em;
+	padding: 0.7em 1.2em;
+	border-radius: 45px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+	transition: all 0.2s ease-in-out;
+}
+
+#postTitle:focus {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#postContent {
+	width: 100%;
+	height: 100px;
+	font-family: "Ubuntu Mono";
+	font-size: 1em;
+	padding: 1.2em;
+	border-radius: 25px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+	transition: all 0.2s ease-in-out;
+}
+
+#postContent:focus {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.AddPost__btn {
+	width: 50%;
+	font-family: "Ubuntu Mono";
+	font-size: 1.1em;
+	align-self: center;
+	border-radius: 25px;
+	padding: 0.9em 1.7em;
+	background: #3b3b3b;
+	font-weight: bold;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+	transition: all 0.2s ease-in-out;
+}
+
+.AddPost__btn:hover {
+	background: #3b3b3bb7;
+	box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 992px) {
+	.AddPost__form {
+		width: 80%;
+		display: inherit;
+		flex-direction: inherit;
+		justify-content: space-evenly;
+	}
+}

@@ -4,6 +4,7 @@ import "./PostsList.css";
 
 const PostsList = () => {
 	// Get the entire posts
+	// we're passing in a selector function called "selectAllPosts" which gives us the entire posts from the state.
 	const posts = useSelector(selectAllPosts);
 
 	const renderedPosts = posts.map((post) => (
@@ -16,7 +17,6 @@ const PostsList = () => {
 	return (
 		<section className="Posts">
 			<h2 className="Posts__title">Posts</h2>
-
 			<div className="Posts__list">{renderedPosts}</div>
 		</section>
 	);

@@ -34,3 +34,12 @@
 	font-size: 0.95em;
 	color: darkgrey;
 }
+
+.warning {
+	font-family: "Ubuntu Mono";
+	margin: 3em 0;
+	font-size: 1.2em;
+	color: rgba(0, 0, 0, 0.5);
+	user-select: none;
+	pointer-events: none;
+}

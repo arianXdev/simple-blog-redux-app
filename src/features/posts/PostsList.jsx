@@ -10,14 +10,16 @@ const PostsList = () => {
 	const renderedPosts = posts.map((post) => (
 		<article key={post.id} className="Posts__item">
 			<h3 className="Posts__item-title">{post.title}</h3>
-			<p className="Posts__item-body">{post.content.substring(0, 100)}</p>
+			<p className="Posts__item-body">{post.content.substring(0, 100)}...</p>
 		</article>
 	));
 
 	return (
 		<section className="Posts">
 			<h2 className="Posts__title">Posts</h2>
-			<div className="Posts__list">{renderedPosts}</div>
+			<div className="Posts__list">
+				{posts.length != 0 ? renderedPosts : <p className="warning">There is nothing in here! You may want to consider adding a few posts.</p>}
+			</div>
 		</section>
 	);
 };

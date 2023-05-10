@@ -13,12 +13,13 @@ const postsSlice = createSlice({
 				state.push(action.payload); // uses ImmerJS behind the scenes (under the hood), so we don't have to worry about mutating the state directly!
 			},
 
-			prepare: (title, content) => {
+			prepare: (title, content, userId) => {
 				return {
 					payload: {
 						id: nanoid(), // generates some random id easily
 						title,
 						content,
+						userId,
 					},
 				};
 			},

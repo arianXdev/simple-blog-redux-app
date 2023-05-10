@@ -76,7 +76,7 @@
 	transition: all 0.2s ease-in-out;
 }
 
-.AddPost__btn:hover {
+.AddPost__btn:not(:disabled):hover {
 	background: #3b3b3bb7;
 	box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
 }

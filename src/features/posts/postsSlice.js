@@ -62,12 +62,20 @@ const postsSlice = createSlice({
 				};
 			},
 		},
+
+		reactionAdded: (state, action) => {
+			const { postId, reaction } = action.payload;
+			const existingPost = state.find((post) => post.id === postId);
+			if (existingPost) {
+				existingPost.reactions[reaction]++;
+			}
+		},
 	},
 });
 
 export const selectAllPosts = (state) => state.posts; // a selector function which gives us the posts part of the state.
 
 // That is going to generate an action creator with the same name automatiaclly
-export const { postAdded } = postsSlice.actions;
+export const { postAdded, reactionAdded } = postsSlice.actions;
 
 export default postsSlice.reducer;

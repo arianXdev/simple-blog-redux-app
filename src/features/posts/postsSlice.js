@@ -2,7 +2,36 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit"; // nanoid will help us generate a random id
 import { sub } from "date-fns";
 
-const initialState = [];
+const initialState = [
+	{
+		id: "1",
+		title: "Blog post 1",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, laudantium vero aut nostrum quidem eos nemo ut alias mollitia minus, quod minima reiciendis dignissimos ducimus obcaecati facere. Ducimus, minima et.",
+		date: sub(new Date(), { minutes: 10 }).toISOString(),
+		reactions: {
+			thumbsUp: 0,
+			wow: 0,
+			heart: 0,
+			rocket: 0,
+			coffee: 0,
+		},
+	},
+	{
+		id: "2",
+		title: "Blog post 2",
+		content:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, laudantium vero aut nostrum quidem eos nemo ut alias mollitia minus, quod minima reiciendis dignissimos ducimus obcaecati facere. Ducimus, minima et.",
+		date: sub(new Date(), { minutes: 5 }).toISOString(),
+		reactions: {
+			thumbsUp: 0,
+			wow: 0,
+			heart: 0,
+			rocket: 0,
+			coffee: 0,
+		},
+	},
+];
 
 const postsSlice = createSlice({
 	name: "posts",
@@ -22,6 +51,13 @@ const postsSlice = createSlice({
 						content,
 						date: new Date().toISOString(),
 						userId,
+						reactions: {
+							thumbsUp: 0,
+							wow: 0,
+							heart: 0,
+							rocket: 0,
+							coffee: 0,
+						},
 					},
 				};
 			},

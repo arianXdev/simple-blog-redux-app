@@ -6,15 +6,22 @@
 	margin-bottom: 3em;
 }
 
+.Posts__list {
+	display: inherit;
+	justify-content: center;
+	flex-direction: column-reverse;
+}
+
 .Posts__title {
 	font-family: "Ubuntu Mono";
 	font-size: 2.3em;
 	font-weight: 900;
+	margin-bottom: 1em;
 	text-decoration: underline;
 }
 
 .Posts__item {
-	margin: 2em 0;
+	margin: 1em 0;
 	padding: 1.5em 4em;
 	border: 1px solid whitesmoke;
 	line-height: 1.8;

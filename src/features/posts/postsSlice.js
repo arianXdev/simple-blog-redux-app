@@ -1,5 +1,6 @@
 // a slice is where we divide up our state (Redux Store)
 import { createSlice, nanoid } from "@reduxjs/toolkit"; // nanoid will help us generate a random id
+import { sub } from "date-fns";
 
 const initialState = [];
 
@@ -19,6 +20,7 @@ const postsSlice = createSlice({
 						id: nanoid(), // generates some random id easily
 						title,
 						content,
+						date: new Date().toISOString(),
 						userId,
 					},
 				};
